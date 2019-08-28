@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <defs>
+      <!-- Определение элемента-окружности для повторного использования-->
+      <circle id="circle" cx="4" cy="4" r="3" style="fill: black;stroke: black;"/>
+   </defs>
+   <use xlink:href="#circle"/>
+   <use xlink:href="#circle" transform="translate(10,0)"/>
+   <use xlink:href="#circle" transform="translate(20,0)"/>
+</svg>
