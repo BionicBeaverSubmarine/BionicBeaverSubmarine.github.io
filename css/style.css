@@ -1,0 +1,1004 @@
+/* Подключение шрифтов */
+
+@font-face {
+   font-family: 'JosefinSans';
+   src: url(../fonts/JosefinSans-Bold.ttf);
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'JosefinSans';
+   src: url(../fonts/JosefinSans-Regular.ttf);
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url(../fonts/OpenSans-Regular.ttf);
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url(../fonts/OpenSans-Light.ttf);
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Raleway';
+   src: url(../fonts/Raleway-Regular.ttf);
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'OpenSans';
+   src: url(../fonts/OpenSans-Bold.ttf);
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Mrs Sheppards';
+   src: url(../fonts/MrsSheppards-Regular.otf);
+   font-weight: 400;
+   font-style: normal;
+} 
+
+/* Общие свойства */
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'JosefinSans', sans-serif;
+   font-weight: 400;
+   width: 1660px;
+   margin: 0 auto;
+}
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: #000;
+}
+
+/* Хедер */
+
+header {
+   max-width: 1563px;
+   margin: 38px auto;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* Навигация */
+
+.nav {
+   font-family: 'OpenSans', sans-serif;
+   font-size: 13px;
+   font-weight: 400;
+   display: flex;
+   justify-content: flex-start;
+}
+
+.nav__item {
+   position: relative;
+   margin-right: 37px;
+}
+
+.nav__item::after {
+   content: "";
+   display: block;
+   position: absolute;
+   right: -12px;
+   top: calc(50% - 1px);
+   border: 3px solid transparent;
+   border-top: 4px solid black;
+}
+
+.nav__link:hover, .submenu__link:hover {
+   color: #b59f5b;
+}
+
+.nav__item:hover::after {
+   border-top-color: #b59f5b;
+}
+
+.nav__item:hover .submenu {
+   display: block;
+}
+
+.submenu {
+   display: none;
+   position: absolute;
+   width: 100px;
+   padding-top: 5px;
+   /* background-color: #eee; */
+   text-transform: uppercase;
+}
+
+.submenu > li {
+   padding: 0px 5px 5px 5px;
+}
+
+.nav__link {
+   text-transform: uppercase;
+   color: #0f0d0e;
+}
+
+.nav__contact {
+   margin-left: -6px;
+}
+
+
+/* Социальные сети */
+
+.social {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.social__link {
+   display: block;
+   background-repeat: no-repeat;
+   width: 22px;
+   height: 22px;   
+   margin-left: 19px;
+}
+
+.twitter {
+   background-image: url(../img/social/twitter.svg);
+   background-repeat: no-repeat;
+}
+
+.facebook {
+   background-image: url(../img/social/facebook.svg);
+   background-repeat: no-repeat;
+}
+
+.linkedin {
+   background-image: url(../img/social/linkedin.svg);   
+   background-repeat: no-repeat;
+}
+
+.instagram {
+   background-image: url(../img/social/instagram.svg);
+   background-repeat: no-repeat;
+}
+
+.google {
+   background-image: url(../img/social/google-plus.svg);
+   background-repeat: no-repeat;
+}
+
+.social__twitter {
+   background-size: 15px 15px;   
+   background-position: 0px 1px;
+}
+
+.social__facebook {
+   background-size: 15px 18px;
+   background-position: 0px 0px;
+}
+
+.social__linkedin {
+   background-size: 15px 15px;
+   background-position: 1px 2px;
+}
+
+.social__instagram {
+   background-size: 15px 15px;
+   background-position: 1px 1px;
+}
+
+.social__google {
+   background-size: 20px 20px;
+   background-position: 1px -1px;
+}
+
+
+
+/* Логотип */
+
+.logo {
+   width: 282px;
+   display: block;
+   margin: 57px auto 0;
+}
+
+
+.line {
+   width: 66px;
+   height: 3px;
+   background-color: #b59f5b;
+   opacity: 0.4;
+}
+
+.header__line {
+   /* выравнивание блока по центру родителя */
+   margin: 33px auto 0;
+}
+
+/* Картинки после логотипа */
+
+.post-top {
+   margin: 55px auto 0;
+   max-width: 1563px;
+   display: flex;
+   /* По-умолчанию флекс-элементы растягиваются на всю
+   высоту родителя:
+   align-items: stretch;  */
+   justify-content: space-between;
+}
+
+.post-top-col {
+   /* position: relative; */
+   text-align: center;
+   background-color: #000;
+   background-size: cover;
+   background-position: 50% 50%;
+   /* Затемнение фоновой картинки с помощью наложения тени */
+   box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.7);
+   /* height: 359px; */
+}
+
+/* Наложение полупрозрачного блока для затемнения картинки
+- не используем, вместо этого применяем свойство box-shadow
+.post-top-col::after {
+   content: '';
+   display: block;
+   position: absolute;
+   background-color: rgba(0, 0, 0, 0.7);
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+ */
+
+.post-top-col_1 {
+   min-width: 33.2%;
+   background-image: url("../img/post-top-col_1.jpg");
+}
+
+.post-top-col_2 {
+   min-width: 518px;
+   background-image: url("../img/post-top-col_2.jpg");
+}
+
+.post-top-col_3 {
+   min-width: 518px;
+   background-image: url("../img/post-top-col_3.jpg");
+}
+
+/* Текстовое содержимое на каждой из картинок */
+
+.post-top-col__frame {
+   /* position: absolute;
+   height: 134px; */
+   /* z-index: 1; */
+   width: 466px;
+   box-sizing: border-box;
+   /* auto по-горизонтали центрирует контент блока, выравнивая margin-ы */
+   margin: 171px auto 53px;
+   padding-top: 16px;
+   border: 3px solid #b59f5b;
+   background-color: transparent;
+   letter-spacing: 0.01em;
+}
+
+.post-top-col__tag {
+   font-family: OpenSans, sans-serif;
+   font-weight: 700;
+   font-size: 14px;
+   color: #b59f5b;
+   text-transform: uppercase;
+   white-space: pre-wrap;
+}
+
+.post-top-col__title {
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 24px;
+   text-transform: uppercase;
+   margin-top: 13px;
+   padding: 0 20px;
+}
+
+.post-top-col__link {
+   color: #fff;
+  
+}
+
+.post-top-col__info {
+   font-size: 12px;
+   font-weight: 300;
+   display: flex;
+   justify-content: space-between;
+   padding-left: 12px;
+   padding-right: 9px;
+   margin-top: 12px;
+   /* margin-bottom: 7px; */
+}
+
+.post-top-col__comment-block {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.post-top-col__info, .post-top-col__comment-count {
+   color: rgba(255, 255, 255, 0.54);
+}
+
+.post-top-col__comment-count {
+   font-family: Raleway, sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+}
+
+.comment-icon {
+   background-image: url(../img/icons/comment.svg);
+   background-repeat: no-repeat;
+}
+
+.post-top-col__comment-icon {
+   width: 20px;
+   height: 20px;
+   background-size: 15px 14px;
+   margin-right: 4px;
+}
+
+/* Контейнеры для постов и сайдбара */
+
+.main {
+   display: flex;
+   justify-content: space-between;
+   max-width: 1141px;
+   padding-left: 3px;
+   margin: 82px auto 0;
+}
+
+.post {
+   width: 761px;
+}
+
+/* Посты */
+
+.block-post {
+   position: relative;
+   margin-top: 48px;
+}
+
+.block-post_first {
+   margin-top: 40px;
+}
+
+.block-post-left {
+   position: absolute;
+   top: 29px;
+}
+
+.block-post-right {
+   margin-left: 328px;
+}
+
+.block-post-right__info {
+   padding: 23px 15px 17px 87px;
+   border: 3px solid #e1d9bd;
+}
+
+.block-post-right__tag {
+   color: #b59f5b;
+   text-transform: uppercase;
+   font-size: 14px;
+   font-weight: 700;
+   font-family: OpenSans, sans-serif;
+   white-space: pre-wrap;
+   
+}
+
+.block-post-right__title {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 24px;
+   margin-top: 9px;
+}
+
+.block-post-right__title-link {
+   color: #0f0d0e;
+}
+
+.block-post-right__date {
+   display: flex;
+   margin-top: 26px;
+}
+
+.block-post-right__date-text {
+   font-family: OpenSans, sans-serif;
+   font-size: 12px;
+   font-weight: 300;
+   color: rgba(0, 0, 0, 0.54);
+}
+
+.block-post-right__author {
+   font-family: OpenSans, sans-serif;
+   font-size: 12px;
+   font-weight: 700;
+   color: #000;
+   margin-left: 16px;
+}
+
+.block-post-right__description {
+   height: 90px;
+   overflow: hidden;
+   color: #0f0d0e;
+   font-family: OpenSans, sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 22px;   
+   padding: 25px 16px 0 90px;   
+}
+
+.ellipsis {
+   width: 28px;
+   height: 8px;
+   background-image: url(../img/icons/ellipsis.svg);
+   background-repeat: no-repeat;
+   background-size: 28px 8px;
+   margin-left: 88px;
+   margin-top: 2px;
+}
+
+.block-post-right__bottom {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 47px;
+   border-bottom: 3px solid #eeeeee;
+   padding-bottom: 7px;
+}
+
+.block-post-right__comments {
+   display: flex;
+   justify-content: flex-start;
+}
+
+.comment-post-icon {
+   background-image: url(../img/icons/comment-no-fill.svg);
+   background-repeat: no-repeat;
+}
+
+.block-post-right__comment-post-icon {
+   width: 19px;
+   height: 18px;
+   background-size: 15px 14px;   
+   background-position: 50% 50%;
+   margin-left: 2px;
+}
+
+.comment-post-counter {
+   color: #0f0d0e;
+   font-family: OpenSans, sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+   margin-left: 11px;
+}
+
+.block-post-right__social {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.block-post-right__share {
+   font-family: Raleway, sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+   margin-right: 22px;
+}
+
+.block-post-right__twitter {
+   width: 13px;
+   height: 13px;
+   background-size: cover;
+   margin-right: 22px;
+}
+
+.pinterest {
+   background-image: url(../img/social/pinterest.svg);
+   background-repeat: no-repeat;
+}
+
+.block-post-right__pinterest {
+   width: 13px;
+   height: 13px;
+   background-size: cover;
+   margin-right: 16px;
+}
+
+.block-post-right__facebook {
+   width: 11px;
+   height: 15px;
+   background-size: cover;
+}
+
+/* Контейнер для картинки */
+.block-post-left__thumb {
+   /* Чтобы работало позиционирование для внутренней картинки,
+   указываем relative */
+   position: relative;
+   overflow: hidden;
+   width: 381px;
+   height: 294px;
+}
+
+.block-post-left__img {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 381px;
+   height: 294px;   
+   object-fit: cover;
+   z-index: -1;
+}
+
+/* Сайдбар */
+
+.sidebar {
+   box-sizing: border-box;
+   width: calc(100% - 871px);
+}
+
+.sidebar__title {
+   color: #0f0d0e;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+   text-align: center;
+}
+
+
+
+/* Блок "О себе" */
+
+.about {
+   position: relative;
+   border: 3px solid #e1d9bd;
+   padding: 108px 20px 27px 20px;
+   margin-top: 103px;
+   text-align: center;
+}
+
+.about__avatar {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: -103px;
+   z-index: 10;
+}
+
+.about__thumb {
+   position: relative;
+   margin: 0 auto;
+   width: 194px;
+   height: 194px;
+   overflow: hidden;
+   border-radius: 50%; 
+}
+
+.about__img {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   width: 194px;
+   height: 194px;   
+   object-fit: cover;
+   /* z-index:-1; */
+}
+
+.about__title {
+   padding-left: 13px;
+}
+
+.about p {
+   height: 95px;
+   overflow: hidden;
+   color: #0f0d0e;
+   opacity: 0.7;
+   font-family: 'OpenSans', sans-serif;
+   font-size: 15px;
+   font-style: italic;
+   line-height: 24px;
+   padding-top: 10px;
+   letter-spacing: -0.03em;
+}
+
+.follow {
+   display: block;
+   color: #b59f5b;
+   font-family: "Mrs Sheppards", cursive;
+   font-size: 24px;
+   font-weight: 400;
+}
+
+.about__follow {
+   margin-top: 19px;
+   padding-left: 4px;
+}
+
+.about__social {
+   display: flex;
+   justify-content: space-between;
+   padding: 19px 25px 0 30px;
+}
+
+.about__social-link {
+   display: block;
+   width: 20px;
+   height: 20px;
+}
+
+.about__twitter {
+   background-size: 15px 15px;   
+   background-position: 0px 0px;
+}
+
+.about__facebook {
+   background-size: 14px 18px;
+   background-position: 2px -1px;
+}
+
+.about__linkedin {
+   background-size: 13px 13px;
+   background-position: 1px 1px;
+}
+
+.about__instagram {
+   background-size: 13px 13px;
+   background-position: 2px 1px;
+}
+
+.about__google {
+   background-size: 18px 18px;
+   background-position: 1px -1px;
+}
+
+/* Блок "Newsletter" */
+
+.newsletter {
+   text-align: center;
+}
+
+.newsletter__title {
+   margin-top: 37px;
+   padding-left: 4px;
+}
+
+.newsletter__line {
+   margin: 10px auto 0;
+}
+
+.sidebar__input {
+   box-sizing: border-box;
+   height: 49px;
+   background-color: #f4f7f6;
+   border: 3px solid transparent;
+   outline: none;
+   width: 100%;
+   padding: 13px 13px 17px 13px;
+   color: rgba(0, 0, 0, 0.54);
+   font-family: 'OpenSans', sans-serif;
+   font-size: 13px;
+   font-weight: 400;   
+}
+
+.sidebar__input:focus {
+   border: 3px solid #e1d9bd;
+}
+
+.newsletter__input {
+   margin-top: 23px;
+}
+
+.newsletter__button {
+   width: 100%;
+   height: 49px;
+   margin-top: 17px;
+   border: none;
+   outline: none;
+   color: #fff;
+   background-color: #b59f5b;
+   font-family: 'Raleway', sans-serif;
+   font-size: 14px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+/* Блок "Категории" */
+
+.categories__title {
+   margin-top: 44px;
+   padding-left: 13px;
+}
+
+/* Элемент, позиционирующий линию внутри блока categories */
+.categories__line {
+   margin: 10px auto 0;
+}
+
+.categories__list {
+   text-align: left;
+}
+
+.categories__list-item {
+   margin-top: 15px;
+   padding-bottom: 12px;
+   border-bottom: 1px solid rgba(53, 54, 59, 0.1);
+}
+
+.categories__list-item:first-child {
+   margin-top: 24px;
+}
+
+.categories__link {
+   color: #000;
+   font-family: OpenSans, sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+}
+
+.categories__counter {
+   color: #b59f5b;
+   font-family: Raleway, sans-serif;
+   font-weight: 400;
+   font-size: 12px;
+   display: inline-block;
+   padding-left: 7px;
+}
+
+/* Блок (форма) поиска */
+
+.search {
+   display: flex;
+   margin-top: 35px;
+}
+
+.search__input {
+   width: calc(100% - 49px);
+   height: 49px;
+   background-color: #f4f7f6;
+}
+
+.search__button {
+   width: 49px;
+   height: 49px;
+   border: none;
+   outline: none;
+   background-color: #b59f5b;
+   background-image: url(../img/icons/search.svg);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: 17px 17px;
+}
+
+/* Баннер */
+
+.banner__title {
+   margin-top: 36px;
+   padding-left: 3px;   
+}
+
+.banner__line {
+   margin: 10px auto 0;
+}
+
+.banner__thumb {
+   height: 368px;
+   background-color: #bdb09d;
+   margin-top: 24px;
+   overflow: hidden;
+}
+
+.banner__img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+
+
+/* Блок "Тэги" */
+
+.tags__title {
+   margin-top: 37px;
+    padding-left: 2px;
+}
+
+.tags__line {
+   margin: 10px auto 0;
+}
+
+.tags__list {
+   display: flex;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   margin-top: 21px;
+   margin-left: -2.4px;
+}
+
+.tag__link {
+   display: block;
+   padding: 3.5px 14px 3.5px 12px;
+   margin: 3px 2.4px;
+   border: 3px solid #eeeeee;
+   
+   color: #0f0d0e;
+   font-family: OpenSans, sans-serif;
+   font-size: 12px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.tag__link:hover {
+   border-color: rgba(180, 159, 96, 0.4);
+}
+
+/*
+=======================
+         Футер
+=======================
+*/
+
+.footer {
+   margin: 105px auto 0;
+   max-width: 1563px;
+}
+
+.footer__cityblog {
+   width: 210px;
+   margin: 0 auto;
+   padding-left: 17px;
+   text-align: center;
+}
+
+.cityblog__title {
+   color: #0f0d0e;
+   font-size: 18px;
+   font-weight: 700;
+   text-transform: uppercase;
+}
+
+.cityblog__instagram-link {
+   display: block;
+   margin-left: 42px;
+   padding-left: 24px;
+   color: #b59f5b;
+   text-align: left;
+   font-family: 'Mrs Sheppards', cursive;
+   font-size: 24px;
+   font-weight: 400;
+   background-image: url(../img/social/instagram-light-brown.svg);
+   background-repeat: no-repeat;
+   background-size: 16px 16px;
+   background-position: 0px 11px;
+}
+
+   /* Галлерея в футере */
+
+.gallery {
+   display: flex;
+   justify-content: space-between;
+   height: 215px;
+   background-color: #fff;
+   margin-top: 40px;   
+}
+
+.gallery__thumb {
+   overflow: hidden;
+   width: calc(100% / 7 - 3px);
+}
+
+.gallery__img {
+   width: 100%;
+   object-fit: cover;
+}
+
+/* Соц сети в футере */
+
+.footer__social {
+   display: flex;
+   height: 83px;
+   margin-top: 26px;
+   background-color: #f4f7f6;
+}
+
+.footer__social-list {
+   display: flex;
+   width: 330px;
+   margin: auto;
+   justify-content: space-between;
+}
+
+.tumblr {
+   background-image: url(../img/social/tumblr.svg);
+   background-repeat: no-repeat;
+}
+
+.footer__social-icon {
+   display: block;
+   width: 26px;
+   height: 22px;
+}
+
+.footer__tumblr {
+   background-size: 20px;
+   background-position: -2px 0px;
+}
+
+.footer__twitter {
+   background-size: 18px;
+   background-position: 1px 1px;
+}
+
+.footer__pinterest {
+   background-size: 18px;
+   background-position: 2px 1px;
+}
+
+.footer__facebook {
+   background-size: 20px;
+   background-position: 3px 0px;
+}
+
+.footer__google {
+   width: 30px;
+   background-size: 30px 26px;
+   background-position: -1px -3px;
+}
+
+.footer__instagram {
+   background-size: 18px;
+   background-position: 3px 1px;
+}
+
+/* Копирайт */
+
+.footer__copyright {
+   opacity: 0.54;
+   color: #000;
+   font-family: 'OpenSans', sans-serif;
+   font-size: 12px;
+   font-weight: 300;
+}
+
+.btn-top {
+   display: block;
+   width: 70px;
+   margin: 13px auto 0;
+   padding-left: 1px;
+   font-family: 'Mrs Sheppards', cursive;
+   font-size: 30px;
+   font-weight: 400;
+   text-transform: lowercase;
+}
+
+.footer__copyright p {
+   padding-top: 15px;
+   padding-bottom: 27px;
+   text-align: center;
+}
